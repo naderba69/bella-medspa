@@ -138,14 +138,14 @@
         }
 
         /* Before/After Slider */
- .ba-slider {
+        .ba-slider {
             position: relative;
             width: 100%;
-            height: 400px;
+            height: 500px;
             border-radius: 1.5rem;
             overflow: hidden;
             cursor: col-resize;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);        }
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);        }
         .ba-slider .ba-img {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -174,8 +174,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 48px;
-            height: 48px;
+            width: 56px;
+            height: 56px;
             background: #C9A96E;
             border-radius: 50%;
             display: flex;
@@ -184,15 +184,15 @@
             color: white;
             font-size: 14px;
             font-weight: 600;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
             letter-spacing: 4px;
             padding-right: 4px;
         }
         .ba-label {
             position: absolute;
-            bottom: 16px;
-            padding: 6px 16px;
-            background: rgba(11, 60, 38, 0.85);
+            bottom: 20px;
+            padding: 8px 20px;
+            background: rgba(11, 60, 38, 0.9);
             color: white;
             font-size: 12px;            font-weight: 600;
             border-radius: 20px;
@@ -200,8 +200,8 @@
             text-transform: uppercase;
             z-index: 5;
         }
-        .ba-label-before { left: 16px; }
-        .ba-label-after { right: 16px; }
+        .ba-label-before { left: 20px; }
+        .ba-label-after { right: 20px; }
 
         /* Step indicator */
         .step-dot {
@@ -273,6 +273,13 @@
             transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         .mobile-menu.open { transform: translateX(0); }
+
+        /* Image object fit */
+        .img-cover {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -285,14 +292,14 @@
                     <!-- Logo -->
                     <a href="#" class="flex items-center space-x-2 group">
                         <div class="w-10 h-10 rounded-full bg-emerald-deep flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="text-gold font-serif text-xl font-bold">B</span>
-                        </div>
+                            <span class="text-gold font-serif text-xl font-bold">B</span>                        </div>
                         <span class="font-serif text-2xl font-semibold text-emerald-deep tracking-wide">
                             Bella <span class="text-gold font-light">MedSpa</span>
                         </span>
                     </a>
 
-                    <!-- Desktop Nav -->                    <div class="hidden md:flex items-center space-x-8">
+                    <!-- Desktop Nav -->
+                    <div class="hidden md:flex items-center space-x-8">
                         <a href="#services" class="text-sm font-medium text-gray-600 hover:text-emerald-deep transition-colors duration-300 relative group">
                             Services
                             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -335,13 +342,13 @@
             </div>
         </div>
     </nav>
-
     <!-- ==================== HERO SECTION ==================== -->
     <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-br from-white via-linen/30 to-white">
         <!-- Decorative elements -->
         <div class="absolute top-20 left-10 w-72 h-72 bg-rose-pastel/20 rounded-full blur-3xl animate-float-slow"></div>
         <div class="absolute bottom-20 right-10 w-96 h-96 bg-gold/10 rounded-full blur-3xl animate-float"></div>
-        <div class="absolute top-40 right-1/4 w-4 h-4 bg-gold rounded-full animate-float-delay opacity-60"></div>        <div class="absolute bottom-40 left-1/4 w-3 h-3 bg-emerald-deep rounded-full animate-float opacity-40"></div>
+        <div class="absolute top-40 right-1/4 w-4 h-4 bg-gold rounded-full animate-float-delay opacity-60"></div>
+        <div class="absolute bottom-40 left-1/4 w-3 h-3 bg-emerald-deep rounded-full animate-float opacity-40"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -383,14 +390,14 @@
                         </button>
                     </div>
 
-                    <!-- Trust Badges -->
-                    <div class="flex items-center space-x-6 mt-12" data-aos="fade-up" data-aos-delay="500">
+                    <!-- Trust Badges -->                    <div class="flex items-center space-x-6 mt-12" data-aos="fade-up" data-aos-delay="500">
                         <div class="flex -space-x-3">
-                            <div class="w-10 h-10 rounded-full bg-rose-pastel border-2 border-white flex items-center justify-center text-xs font-bold text-emerald-deep">S</div>
-                            <div class="w-10 h-10 rounded-full bg-gold/30 border-2 border-white flex items-center justify-center text-xs font-bold text-emerald-deep">M</div>
-                            <div class="w-10 h-10 rounded-full bg-emerald-deep border-2 border-white flex items-center justify-center text-xs font-bold text-white">K</div>
-                            <div class="w-10 h-10 rounded-full bg-linen border-2 border-white flex items-center justify-center text-xs font-bold text-emerald-deep">R</div>
-                        </div>                        <div>
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Client" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Client" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Client" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Client" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                        </div>
+                        <div>
                             <div class="flex items-center space-x-1 text-gold">
                                 <span>★★★★★</span>
                                 <span class="text-sm text-gray-600 ml-2">4.9/5</span>
@@ -400,23 +407,15 @@
                     </div>
                 </div>
 
-                <!-- Right Content - Geometric Frame -->
+                <!-- Right Content - Geometric Frame with Real Image -->
                 <div class="relative" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
                     <div class="geo-frame relative">
-                        <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] bg-gradient-to-br from-rose-pastel/20 via-linen to-gold/10">
-                            <!-- Placeholder for hero image -->
-                            <div class="absolute inset-0 bg-gradient-to-br from-emerald-deep/5 via-transparent to-gold/10"></div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="text-center p-8">
-                                    <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-emerald-deep to-emerald-light flex items-center justify-center animate-float shadow-xl">
-                                        <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                        </svg>
-                                    </div>
-                                    <p class="font-serif text-2xl text-emerald-deep font-semibold mb-2">Bella MedSpa</p>
-                                    <p class="text-gray-500 text-sm">Luxury Aesthetic Medicine</p>
-                                </div>
-                            </div>
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&h=1000&fit=crop" 
+                                 alt="Luxury MedSpa Treatment" 
+                                 class="img-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-emerald-deep/20 via-transparent to-transparent"></div>
+                            
                             <!-- Decorative corners -->
                             <div class="absolute top-4 left-4 w-16 h-16 border-t-2 border-l-2 border-gold/50 rounded-tl-2xl"></div>
                             <div class="absolute bottom-4 right-4 w-16 h-16 border-b-2 border-r-2 border-gold/50 rounded-br-2xl"></div>
@@ -439,8 +438,8 @@
                     </div>
 
                     <!-- Floating stats card -->
-                    <div class="absolute -top-4 -right-4 glass-card rounded-2xl p-4 animate-float shadow-xl" data-aos="zoom-in" data-aos-delay="1000">                        <div class="text-center">
-                            <p class="text-2xl font-bold text-emerald-deep font-serif">10K+</p>
+                    <div class="absolute -top-4 -right-4 glass-card rounded-2xl p-4 animate-float shadow-xl" data-aos="zoom-in" data-aos-delay="1000">
+                        <div class="text-center">                            <p class="text-2xl font-bold text-emerald-deep font-serif">10K+</p>
                             <p class="text-xs text-gray-500">Transformations</p>
                         </div>
                     </div>
@@ -480,28 +479,23 @@
                     <!-- Chat Header -->
                     <div class="bg-emerald-deep px-6 py-4 flex items-center space-x-4">
                         <div class="relative">
-                            <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                                </svg>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face" 
+                                 alt="AI Advisor" 
+                                 class="w-12 h-12 rounded-full object-cover border-2 border-white/30">
                             <div class="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-green-400 rounded-full border-2 border-emerald-deep"></div>
                         </div>
                         <div>
-                            <h3 class="text-white font-semibold">Bella AI Advisor</h3>                            <p class="text-white/60 text-sm">Online • Ready to analyze</p>
+                            <h3 class="text-white font-semibold">Dr. Sarah Mitchell</h3>
+                            <p class="text-white/60 text-sm">AI-Powered Consultation</p>
                         </div>
                     </div>
-
                     <!-- Chat Body -->
                     <div class="p-6 space-y-6 min-h-[400px]" id="chatBody">
                         <!-- AI Message 1 -->
                         <div class="flex items-start space-x-3" id="msg1">
-                            <div class="w-8 h-8 rounded-full bg-emerald-deep/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-emerald-deep" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                    <path fill-rule="evenodd" d="M18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face" 
+                                 alt="AI" 
+                                 class="w-8 h-8 rounded-full object-cover flex-shrink-0 mt-1">
                             <div class="bg-linen rounded-2xl rounded-tl-md px-5 py-3 max-w-sm">
                                 <p class="text-gray-700 text-sm">Hello! I'm Bella's AI Skin Advisor. 👋 I'll help you find the perfect treatment. <strong>What's your primary skin concern?</strong></p>
                             </div>
@@ -537,13 +531,13 @@
                                         <p class="text-xs text-gray-500">Dryness & Plumping</p>
                                     </div>
                                 </button>
-                                <button onclick="selectConcern('contour')" class="ai-option-btn group flex items-center space-x-3 p-4 rounded-xl border-2 border-gray-200 hover:border-emerald-deep hover:bg-emerald-deep/5 transition-all duration-300 text-left">                                    <div class="w-10 h-10 rounded-lg bg-purple-100 group-hover:bg-emerald-deep/10 flex items-center justify-center transition-colors">
+                                <button onclick="selectConcern('contour')" class="ai-option-btn group flex items-center space-x-3 p-4 rounded-xl border-2 border-gray-200 hover:border-emerald-deep hover:bg-emerald-deep/5 transition-all duration-300 text-left">
+                                    <div class="w-10 h-10 rounded-lg bg-purple-100 group-hover:bg-emerald-deep/10 flex items-center justify-center transition-colors">
                                         <span class="text-lg">💎</span>
                                     </div>
                                     <div>
                                         <p class="text-sm font-semibold text-gray-800">Contour</p>
-                                        <p class="text-xs text-gray-500">Volume & Definition</p>
-                                    </div>
+                                        <p class="text-xs text-gray-500">Volume & Definition</p>                                    </div>
                                 </button>
                             </div>
                         </div>
@@ -551,12 +545,9 @@
                         <!-- AI Response (hidden initially) -->
                         <div id="aiResponse" class="hidden">
                             <div class="flex items-start space-x-3">
-                                <div class="w-8 h-8 rounded-full bg-emerald-deep/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <svg class="w-4 h-4 text-emerald-deep" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                        <path fill-rule="evenodd" d="M18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.973 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" clip-rule="evenodd"/>
-                                    </svg>
-                                </div>
+                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face" 
+                                     alt="AI" 
+                                     class="w-8 h-8 rounded-full object-cover flex-shrink-0 mt-1">
                                 <div class="bg-linen rounded-2xl rounded-tl-md px-5 py-3 max-w-md">
                                     <div id="aiTyping" class="flex items-center space-x-1.5 py-2">
                                         <div class="typing-dot w-2 h-2 bg-emerald-deep/40 rounded-full"></div>
@@ -586,6 +577,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- Reset Button -->
                         <div id="resetBtn" class="hidden ml-11">
                             <button onclick="resetChat()" class="text-sm text-gold hover:text-emerald-deep transition-colors font-medium flex items-center space-x-1">
@@ -594,8 +586,7 @@
                                 </svg>
                                 <span>Try another concern</span>
                             </button>
-                        </div>
-                    </div>
+                        </div>                    </div>
                 </div>
             </div>
         </div>
@@ -622,20 +613,17 @@
                 <!-- Service Card 1 -->
                 <div class="service-card group bg-linen/50 rounded-2xl overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="100">
                     <div class="relative h-56 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-deep/10 to-rose-pastel/20 group-hover:scale-110 transition-transform duration-700"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-20 h-20 rounded-full bg-white/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
-                                <svg class="w-10 h-10 text-emerald-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                </svg>
-                            </div>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&h=400&fit=crop" 
+                             alt="Botox Treatment" 
+                             class="img-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-deep/40 via-transparent to-transparent"></div>
                         <div class="absolute top-4 right-4">
-                            <span class="px-3 py-1 bg-gold/20 backdrop-blur-sm text-gold text-xs font-semibold rounded-full border border-gold/30">Most Popular</span>
+                            <span class="px-3 py-1 bg-gold/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full border border-gold/30">Most Popular</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-serif text-xl font-semibold text-emerald-deep mb-2">Botox & Neurotoxins</h3>                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Precision-administered neuromodulators to smooth fine lines and restore a refreshed, youthful appearance.</p>
+                        <h3 class="font-serif text-xl font-semibold text-emerald-deep mb-2">Botox & Neurotoxins</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Precision-administered neuromodulators to smooth fine lines and restore a refreshed, youthful appearance.</p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <span class="text-xs text-gray-500">Starting from</span>
@@ -647,18 +635,13 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Service Card 2 -->
                 <div class="service-card group bg-linen/50 rounded-2xl overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="200">
                     <div class="relative h-56 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-rose-pastel/30 to-gold/20 group-hover:scale-110 transition-transform duration-700"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-20 h-20 rounded-full bg-white/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
-                                <svg class="w-10 h-10 text-emerald-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"/>
-                                </svg>
-                            </div>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&h=400&fit=crop" 
+                             alt="Dermal Fillers" 
+                             class="img-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-deep/40 via-transparent to-transparent"></div>
                     </div>
                     <div class="p-6">
                         <h3 class="font-serif text-xl font-semibold text-emerald-deep mb-2">Dermal Fillers</h3>
@@ -678,15 +661,12 @@
                 <!-- Service Card 3 -->
                 <div class="service-card group bg-linen/50 rounded-2xl overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="300">
                     <div class="relative h-56 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-deep/10 to-gold/15 group-hover:scale-110 transition-transform duration-700"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-20 h-20 rounded-full bg-white/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
-                                <svg class="w-10 h-10 text-emerald-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-                                </svg>
-                            </div>                        </div>
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&h=400&fit=crop" 
+                             alt="Laser Treatment" 
+                             class="img-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-deep/40 via-transparent to-transparent"></div>
                         <div class="absolute top-4 right-4">
-                            <span class="px-3 py-1 bg-emerald-deep/10 backdrop-blur-sm text-emerald-deep text-xs font-semibold rounded-full border border-emerald-deep/20">New</span>
+                            <span class="px-3 py-1 bg-emerald-deep/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full border border-emerald-deep/20">New</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -704,17 +684,12 @@
                     </div>
                 </div>
 
-                <!-- Service Card 4 -->
-                <div class="service-card group bg-linen/50 rounded-2xl overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                <!-- Service Card 4 -->                <div class="service-card group bg-linen/50 rounded-2xl overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="100">
                     <div class="relative h-56 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-emerald-deep/10 group-hover:scale-110 transition-transform duration-700"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-20 h-20 rounded-full bg-white/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
-                                <svg class="w-10 h-10 text-emerald-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                                </svg>
-                            </div>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop" 
+                             alt="IV Therapy" 
+                             class="img-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-deep/40 via-transparent to-transparent"></div>
                     </div>
                     <div class="p-6">
                         <h3 class="font-serif text-xl font-semibold text-emerald-deep mb-2">IV Therapy & Wellness</h3>
@@ -733,14 +708,11 @@
 
                 <!-- Service Card 5 -->
                 <div class="service-card group bg-linen/50 rounded-2xl overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative h-56 overflow-hidden">                        <div class="absolute inset-0 bg-gradient-to-br from-gold/20 to-rose-pastel/20 group-hover:scale-110 transition-transform duration-700"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-20 h-20 rounded-full bg-white/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
-                                <svg class="w-10 h-10 text-emerald-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                                </svg>
-                            </div>
-                        </div>
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&h=400&fit=crop" 
+                             alt="Body Contouring" 
+                             class="img-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-deep/40 via-transparent to-transparent"></div>
                     </div>
                     <div class="p-6">
                         <h3 class="font-serif text-xl font-semibold text-emerald-deep mb-2">Body Contouring</h3>
@@ -760,16 +732,11 @@
                 <!-- Service Card 6 -->
                 <div class="service-card group bg-linen/50 rounded-2xl overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="300">
                     <div class="relative h-56 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-deep/10 via-rose-pastel/15 to-gold/15 group-hover:scale-110 transition-transform duration-700"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-20 h-20 rounded-full bg-white/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
-                                <svg class="w-10 h-10 text-emerald-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&h=400&fit=crop" 
+                             alt="PRP Therapy"                              class="img-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-deep/40 via-transparent to-transparent"></div>
                         <div class="absolute top-4 right-4">
-                            <span class="px-3 py-1 bg-rose-pastel/30 backdrop-blur-sm text-emerald-deep text-xs font-semibold rounded-full border border-rose-pastel/40">Limited</span>
+                            <span class="px-3 py-1 bg-rose-pastel/90 backdrop-blur-sm text-emerald-deep text-xs font-semibold rounded-full border border-rose-pastel/40">Limited</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -782,7 +749,8 @@
                             </div>
                             <button class="px-4 py-2 bg-emerald-deep text-white text-sm font-medium rounded-full hover:bg-emerald-light transition-colors group-hover:shadow-lg">
                                 Learn More
-                            </button>                        </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -808,38 +776,20 @@
             <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                 <div class="ba-slider" id="baSlider">
                     <!-- Before Image (Left) -->
-                    <div class="ba-img ba-before bg-gradient-to-br from-gray-200 to-gray-300" id="baBefore">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-gray-300/50 flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                    </svg>
-                                </div>
-                                <p class="text-gray-500 font-medium">Before Treatment</p>
-                                <p class="text-gray-400 text-sm mt-1">Fine lines visible</p>
-                            </div>
-                        </div>
-                        <span class="ba-label ba-label-before">Before</span>
-                    </div>
-
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=1200&h=800&fit=crop" 
+                         alt="Before Treatment" 
+                         class="ba-img ba-before">
+                    
                     <!-- After Image (Right) -->
-                    <div class="ba-img ba-after bg-gradient-to-br from-rose-pastel/30 to-emerald-deep/10" id="baAfter">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-emerald-deep/20 flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-emerald-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                    </svg>
-                                </div>                                <p class="text-emerald-deep font-medium">After Treatment</p>
-                                <p class="text-gray-500 text-sm mt-1">Smooth, radiant skin</p>
-                            </div>
-                        </div>
-                        <span class="ba-label ba-label-after">After</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=1200&h=800&fit=crop" 
+                         alt="After Treatment"                          class="ba-img ba-after">
 
                     <!-- Draggable Handle -->
                     <div class="ba-handle" id="baHandle"></div>
+                    
+                    <!-- Labels -->
+                    <span class="ba-label ba-label-before">Before</span>
+                    <span class="ba-label ba-label-after">After</span>
                 </div>
 
                 <!-- Treatment Labels -->
@@ -880,8 +830,8 @@
             </div>
 
             <!-- Step Indicators -->
-            <div class="flex items-center justify-center mb-12" data-aos="fade-up" data-aos-delay="100">                <div class="flex items-center space-x-4">
-                    <div class="flex flex-col items-center">
+            <div class="flex items-center justify-center mb-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center space-x-4">                    <div class="flex flex-col items-center">
                         <div class="step-dot active" id="stepDot1">
                             <span class="absolute inset-0 flex items-center justify-center text-[8px] font-bold text-white">1</span>
                         </div>
@@ -929,8 +879,8 @@
                         </button>
                         <button onclick="selectService(this, 'Body Contouring Consultation')" class="service-select-btn p-4 rounded-xl border-2 border-gray-200 hover:border-emerald-deep hover:bg-emerald-deep/5 transition-all duration-300 text-left group">
                             <span class="text-2xl mb-2 block">🎯</span>
-                            <p class="font-semibold text-sm text-gray-800">Contouring</p>                            <p class="text-xs text-gray-500 mt-1">From $799</p>
-                        </button>
+                            <p class="font-semibold text-sm text-gray-800">Contouring</p>
+                            <p class="text-xs text-gray-500 mt-1">From $799</p>                        </button>
                         <button onclick="selectService(this, 'IV Therapy Consultation')" class="service-select-btn p-4 rounded-xl border-2 border-gray-200 hover:border-emerald-deep hover:bg-emerald-deep/5 transition-all duration-300 text-left group">
                             <span class="text-2xl mb-2 block">💧</span>
                             <p class="font-semibold text-sm text-gray-800">IV Therapy</p>
@@ -978,8 +928,8 @@
                         <button onclick="nextStep(3)" id="btnToStep3" class="px-8 py-3 bg-emerald-deep text-white font-medium rounded-full hover:bg-emerald-light transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
                             Continue →
                         </button>
-                    </div>                </div>
-
+                    </div>
+                </div>
                 <!-- Step 3: Confirmation -->
                 <div id="step3" class="step-content hidden">
                     <h3 class="font-serif text-2xl font-semibold text-emerald-deep mb-2">Confirm Your Booking</h3>
@@ -1027,8 +977,8 @@
     </section>
 
     <!-- ==================== TESTIMONIALS ==================== -->
-    <section class="relative py-24 lg:py-32 bg-linen/50 overflow-hidden">        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16" data-aos="fade-up">
+    <section class="relative py-24 lg:py-32 bg-linen/50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">            <div class="text-center mb-16" data-aos="fade-up">
                 <span class="inline-block px-4 py-1.5 bg-emerald-deep/10 text-emerald-deep text-xs font-semibold rounded-full tracking-widest uppercase mb-4">Testimonials</span>
                 <h2 class="font-serif text-4xl lg:text-5xl font-bold text-emerald-deep mb-4">
                     Client <span class="italic text-gold">Stories</span>
@@ -1040,7 +990,9 @@
                     <div class="flex items-center space-x-1 text-gold mb-4">★★★★★</div>
                     <p class="text-gray-600 text-sm leading-relaxed mb-6">"Bella MedSpa transformed not just my skin, but my entire confidence. The AI consultation was incredibly accurate, and Dr. Sarah's expertise is unmatched."</p>
                     <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-full bg-rose-pastel/30 flex items-center justify-center text-sm font-bold text-emerald-deep">JM</div>
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" 
+                             alt="Jessica M." 
+                             class="w-10 h-10 rounded-full object-cover">
                         <div>
                             <p class="font-semibold text-sm text-gray-800">Jessica M.</p>
                             <p class="text-xs text-gray-500">Botox & Fillers Client</p>
@@ -1051,7 +1003,9 @@
                     <div class="flex items-center space-x-1 text-gold mb-4">★★★★★</div>
                     <p class="text-gray-600 text-sm leading-relaxed mb-6">"The attention to detail is extraordinary. From the moment I walked in, I felt like royalty. The results speak for themselves — I look 10 years younger."</p>
                     <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-sm font-bold text-emerald-deep">AK</div>
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" 
+                             alt="Amanda K." 
+                             class="w-10 h-10 rounded-full object-cover">
                         <div>
                             <p class="font-semibold text-sm text-gray-800">Amanda K.</p>
                             <p class="text-xs text-gray-500">Laser Rejuvenation Client</p>
@@ -1062,7 +1016,9 @@
                     <div class="flex items-center space-x-1 text-gold mb-4">★★★★★</div>
                     <p class="text-gray-600 text-sm leading-relaxed mb-6">"I've been to many spas, but Bella is in a league of its own. The personalized approach and state-of-the-art technology make all the difference."</p>
                     <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-full bg-emerald-deep/10 flex items-center justify-center text-sm font-bold text-emerald-deep">SR</div>
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" 
+                             alt="Sophia R." 
+                             class="w-10 h-10 rounded-full object-cover">
                         <div>
                             <p class="font-semibold text-sm text-gray-800">Sophia R.</p>
                             <p class="text-xs text-gray-500">Full Assessment Client</p>
@@ -1072,11 +1028,14 @@
             </div>
         </div>
     </section>
-
     <!-- ==================== CTA SECTION ==================== -->
     <section class="relative py-24 lg:py-32 bg-emerald-deep overflow-hidden">
         <div class="absolute inset-0">
-            <div class="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>            <div class="absolute bottom-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl"></div>
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1920&h=1080&fit=crop" 
+                 alt="Luxury Spa Background" 
+                 class="w-full h-full object-cover opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-up">
             <span class="inline-block px-4 py-1.5 bg-white/10 text-gold text-xs font-semibold rounded-full tracking-widest uppercase mb-6">Begin Your Journey</span>
@@ -1117,15 +1076,15 @@
                         </a>
                         <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-deep transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-deep transition-colors">
+                        </a>                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-deep transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
                         </a>
                     </div>
                 </div>
                 <div>
                     <h4 class="font-semibold text-sm uppercase tracking-wider mb-4 text-gold">Services</h4>
-                    <ul class="space-y-3">                        <li><a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Botox & Neurotoxins</a></li>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Botox & Neurotoxins</a></li>
                         <li><a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Dermal Fillers</a></li>
                         <li><a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Laser Rejuvenation</a></li>
                         <li><a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Body Contouring</a></li>
@@ -1166,15 +1125,15 @@
         // Initialize AOS
         AOS.init({
             duration: 800,
-            easing: 'ease-out-cubic',
-            once: true,
+            easing: 'ease-out-cubic',            once: true,
             offset: 100
         });
 
         // ==================== MOBILE MENU ====================
         let menuOpen = false;
         function toggleMenu() {
-            menuOpen = !menuOpen;            document.getElementById('mobileMenu').classList.toggle('open');
+            menuOpen = !menuOpen;
+            document.getElementById('mobileMenu').classList.toggle('open');
         }
 
         // ==================== MAGNETIC BUTTON EFFECT ====================
@@ -1215,8 +1174,7 @@
                 treatment: "Strategic Dermal Filler Placement",
                 price: "$899",
                 match: "96% Match"
-            }
-        };
+            }        };
 
         function selectConcern(concern) {
             // Hide options
@@ -1224,6 +1182,7 @@
             // Show AI response
             const response = document.getElementById('aiResponse');
             response.classList.remove('hidden');
+
             // Simulate typing
             setTimeout(() => {
                 document.getElementById('aiTyping').classList.add('hidden');
@@ -1250,8 +1209,8 @@
         // ==================== BEFORE & AFTER SLIDER ====================
         const slider = document.getElementById('baSlider');
         const handle = document.getElementById('baHandle');
-        const beforeImg = document.getElementById('baBefore');
-        const afterImg = document.getElementById('baAfter');
+        const beforeImg = document.querySelector('.ba-before');
+        const afterImg = document.querySelector('.ba-after');
         let isDragging = false;
 
         function updateSlider(x) {
@@ -1264,14 +1223,14 @@
             afterImg.style.clipPath = `inset(0 0 0 ${pos}%)`;
         }
 
-        slider.addEventListener('mousedown', (e) => {
-            isDragging = true;
+        slider.addEventListener('mousedown', (e) => {            isDragging = true;
             updateSlider(e.clientX);
         });
         slider.addEventListener('mousemove', (e) => {
             if (isDragging) updateSlider(e.clientX);
         });
         document.addEventListener('mouseup', () => isDragging = false);
+
         slider.addEventListener('touchstart', (e) => {
             isDragging = true;
             updateSlider(e.touches[0].clientX);
@@ -1313,14 +1272,14 @@
 
         function selectService(btn, name) {
             document.querySelectorAll('.service-select-btn').forEach(b => {
-                b.classList.remove('border-emerald-deep', 'bg-emerald-deep/5');
-                b.classList.add('border-gray-200');
+                b.classList.remove('border-emerald-deep', 'bg-emerald-deep/5');                b.classList.add('border-gray-200');
             });
             btn.classList.remove('border-gray-200');
             btn.classList.add('border-emerald-deep', 'bg-emerald-deep/5');
             selectedService = name;
             document.getElementById('btnToStep2').disabled = false;
         }
+
         function selectTime(btn) {
             document.querySelectorAll('.time-slot').forEach(b => {
                 b.classList.remove('border-emerald-deep', 'bg-emerald-deep/5', 'text-emerald-deep');
@@ -1362,14 +1321,14 @@
                     btn.onclick = function() {
                         document.querySelectorAll('#calendarGrid button').forEach(b => b.classList.remove('bg-gold', 'text-white'));
                         this.classList.add('bg-gold', 'text-white');
-                        selectedDate = `${today.getMonth() + 1}/${d}/${today.getFullYear()}`;
-                        document.getElementById('btnToStep3').disabled = false;
+                        selectedDate = `${today.getMonth() + 1}/${d}/${today.getFullYear()}`;                        document.getElementById('btnToStep3').disabled = false;
                     };
                 }
                 grid.appendChild(btn);
             }
         }
         generateCalendar();
+
         function updateBookingSummary() {
             const summary = document.getElementById('bookingSummary');
             summary.innerHTML = `
@@ -1411,11 +1370,10 @@
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (target) {                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
     </script>
 </body>
-                      </html>
+</html>
